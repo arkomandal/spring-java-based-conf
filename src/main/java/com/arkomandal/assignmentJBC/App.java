@@ -1,17 +1,11 @@
 package com.arkomandal.assignmentJBC;
 
 import java.util.ArrayList;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Scanner;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
-//	@Autowired
-
-//	@Autowired
-//	Hyundai hyundai;
-//
-//	@Autowired
-//	Honda honda;
 
 	public static void main(String[] args) {
 
@@ -30,20 +24,53 @@ public class App {
 		seats.add("Britax");
 		seats.add("Evenflo");
 
-		Color color = new Color(colors.get(0));
-		Seat seat = new Seat(seats.get(0));
-		Tyre tyre = new Tyre(tyres.get(0));
+		ArrayList<String> cars = new ArrayList<String>();
+		cars.add("maruti");
+		cars.add("hyundai");
+		cars.add("honda");
 
-		Maruti maruti = new Maruti(color, tyre, seat);
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		ArrayList<Car> car = new ArrayList<Car>();
+		Color color = (Color) context.getBean("color");
+		Tyre tyre = (Tyre) context.getBean("tyre");
+		Seat seat = (Seat) context.getBean("seat");
 
-		car.add(maruti);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Select Color: ");
+		for (int i = 0; i < colors.size(); i++) {
+			System.out.println("Type " + i + " for " + colors.get(i));
 
-		System.out.println("Cars: ");
-		for (Car c : car) {
-			System.out.println("Class: " + c.getClass().getSimpleName() + ", Color: " + c.getColor().getColor() + ", Tyre: " + c.getTyre().getTyre() + ", Seat: " + c.getSeat().getSeat());
 		}
+		int c = sc.nextInt();
+		color.setColor(colors.get(c));
+
+		System.out.println("Select Tyre: ");
+		for (int i = 0; i < tyres.size(); i++) {
+			System.out.println("Type " + i + " for " + tyres.get(i));
+
+		}
+		int t = sc.nextInt();
+		tyre.setTyre(tyres.get(t));
+
+		System.out.println("Select Seat: ");
+		for (int i = 0; i < seats.size(); i++) {
+			System.out.println("Type " + i + " for " + seats.get(i));
+
+		}
+		int s = sc.nextInt();
+		seat.setSeat(seats.get(s));
+
+		System.out.println("Select Car: ");
+		for (int i = 0; i < cars.size(); i++) {
+			System.out.println("Type " + i + " for " + cars.get(i));
+
+		}
+		int cn = sc.nextInt();
+
+		Car car = (Car) context.getBean(cars.get(cn));
+
+		car.feature();
 
 	}
+
 }
