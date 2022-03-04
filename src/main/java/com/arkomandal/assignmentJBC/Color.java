@@ -1,25 +1,22 @@
 package com.arkomandal.assignmentJBC;
 
-import java.util.ArrayList;
-
 public class Color {
 
-	ArrayList<String> colors = new ArrayList<String>();
+	String color;
 
 	Color() {
-		colors.add("Red");
-		colors.add("Blue");
-		colors.add("Grey");
 	}
 
-	public ArrayList<String> getColors() {
-		return colors;
+	Color(String color) {
+		this.color = color;
 	}
 
-	public void setColors(ArrayList<String> colors) {
-		this.colors = colors;
+	public String getColor() {
+		return color;
 	}
-	
-	
+
+	public void setColor(String color) {
+		this.color = color;
+	}
 
 }

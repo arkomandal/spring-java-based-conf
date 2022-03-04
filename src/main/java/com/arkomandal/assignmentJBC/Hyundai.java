@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Hyundai extends Car {
 	
-	Hyundai(String color, String tyre, String seat) {
+	Hyundai(Color color, Tyre tyre, Seat seat) {
 		super(color, tyre, seat);
 	}
 

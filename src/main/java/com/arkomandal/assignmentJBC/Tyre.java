@@ -1,23 +1,22 @@
 package com.arkomandal.assignmentJBC;
 
-import java.util.ArrayList;
-
 public class Tyre {
 
-	ArrayList<String> tyres = new ArrayList<String>();
-	
-	Tyre(){
-		tyres.add("MRF");
-		tyres.add("CEAT");
-		tyres.add("Panasonic");
+	String tyre;
+
+	Tyre() {
 	}
 
-	public ArrayList<String> getTyres() {
-		return tyres;
+	Tyre(String tyre) {
+		this.tyre = tyre;
 	}
 
-	public void setTyres(ArrayList<String> tyres) {
-		this.tyres = tyres;
+	public String getTyre() {
+		return tyre;
 	}
-	
+
+	public void setTyre(String tyre) {
+		this.tyre = tyre;
+	}
+
 }

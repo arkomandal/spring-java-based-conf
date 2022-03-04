@@ -2,37 +2,37 @@ package com.arkomandal.assignmentJBC;
 
 public class Car {
 
-	private String color = "";
-	private String tyre = "";
-	private String seat = "";
+	private Color color;;
+	private Tyre tyre;
+	private Seat seat;
 	
-	Car(String color, String tyre, String seat){
+	Car(Color color, Tyre tyre, Seat seat){
 		this.color = color;
 		this.tyre = tyre;
 		this.seat = seat;
 	}
 
-	public String getColor() {
+	public Color getColor() {
 		return color;
 	}
 
-	public void setColor(String color) {
+	public void setColor(Color color) {
 		this.color = color;
 	}
 
-	public String getTyre() {
+	public Tyre getTyre() {
 		return tyre;
 	}
 
-	public void setTyre(String tyre) {
+	public void setTyre(Tyre tyre) {
 		this.tyre = tyre;
 	}
 
-	public String getSeat() {
+	public Seat getSeat() {
 		return seat;
 	}
 
-	public void setSeat(String seat) {
+	public void setSeat(Seat seat) {
 		this.seat = seat;
 	}
 }

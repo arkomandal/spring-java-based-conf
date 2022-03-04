@@ -1,23 +1,22 @@
 package com.arkomandal.assignmentJBC;
 
-import java.util.ArrayList;
-
 public class Seat {
 	
-	ArrayList<String> seats = new ArrayList<String>();
-
+	String seat;
+	
 	Seat() {
-		seats.add("Chicco");
-		seats.add("Britax");
-		seats.add("Evenflo");
+	}
+	
+	Seat(String seat){
+		this.seat = seat;
 	}
 
-	public ArrayList<String> getSeats() {
-		return seats;
+	public String getSeat() {
+		return seat;
 	}
 
-	public void setSeats(ArrayList<String> seats) {
-		this.seats = seats;
+	public void setSeat(String seat) {
+		this.seat = seat;
 	}
 	
 }
