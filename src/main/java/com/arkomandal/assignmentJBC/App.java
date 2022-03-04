@@ -39,32 +39,32 @@ public class App {
 		System.out.println("Select Color: ");
 		for (int i = 0; i < colors.size(); i++) {
 			System.out.println("Type " + i + " for " + colors.get(i));
-
 		}
+		
 		int c = sc.nextInt();
 		color.setColor(colors.get(c));
 
 		System.out.println("Select Tyre: ");
 		for (int i = 0; i < tyres.size(); i++) {
 			System.out.println("Type " + i + " for " + tyres.get(i));
-
 		}
+		
 		int t = sc.nextInt();
 		tyre.setTyre(tyres.get(t));
 
 		System.out.println("Select Seat: ");
 		for (int i = 0; i < seats.size(); i++) {
 			System.out.println("Type " + i + " for " + seats.get(i));
-
 		}
+		
 		int s = sc.nextInt();
 		seat.setSeat(seats.get(s));
 
 		System.out.println("Select Car: ");
 		for (int i = 0; i < cars.size(); i++) {
 			System.out.println("Type " + i + " for " + cars.get(i));
-
 		}
+		
 		int cn = sc.nextInt();
 
 		Car car = (Car) context.getBean(cars.get(cn));
